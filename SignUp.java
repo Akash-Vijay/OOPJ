@@ -9,19 +9,17 @@ public class SignUp extends Frame implements ActionListener, WindowListener {
     TextField textGender;
     TextField textMail;
     TextField textNumber;
-
+    
     public static void main(String[] args) {
         new SignUp();
-
     }
 
     SignUp() {
-
         addWindowListener(this);
         setSize(800, 600);
         setLayout(new GridLayout(6, 1));
         setVisible(true);
-        setTitle("Sign Up");
+        setTitle("Registration Form");
 
         Panel panelTitle = new Panel(new FlowLayout(FlowLayout.CENTER, 30, 20));
         Panel panelName = new Panel(new FlowLayout(FlowLayout.CENTER, 30, 20));
@@ -40,10 +38,10 @@ public class SignUp extends Frame implements ActionListener, WindowListener {
 
         Button submit = new Button("Submit");
 
-        textName = new TextField(10);
-        textGender = new TextField(10);
-        textMail = new TextField(10);
-        textNumber = new TextField(10);
+        textName = new TextField(15);
+        textGender = new TextField(15);
+        textMail = new TextField(15);
+        textNumber = new TextField(15);
 
         textName.setBackground(c1);
         textGender.setBackground(c1);
@@ -71,53 +69,35 @@ public class SignUp extends Frame implements ActionListener, WindowListener {
         add(panelSubmit);
     }
 
-    @Override
+ 
     public void actionPerformed(ActionEvent e) {
-        System.out.print("\nSign Up Details :  \n\n");
+        System.out.print("\nRegistration Details :  \n\n");
         System.out.println("Name         : " + textName.getText());
-        System.out.println("Age          : " + textGender.getText());
+        System.out.println("Gender       : " + textGender.getText());
         System.out.println("Email        : " + textMail.getText());
         System.out.println("Phone number : " + textNumber.getText());
         System.out.print("\n");
-        textGender.setText("");
-        textMail.setText("");
-        textName.setText("");
-        textNumber.setText("");
-
     }
 
-    @Override
     public void windowOpened(WindowEvent e) {
-
     }
 
-    @Override
     public void windowClosing(WindowEvent e) {
         dispose();
     }
 
-    @Override
     public void windowClosed(WindowEvent e) {
-
     }
 
-    @Override
     public void windowIconified(WindowEvent e) {
-
     }
 
-    @Override
     public void windowDeiconified(WindowEvent e) {
-
     }
 
-    @Override
     public void windowActivated(WindowEvent e) {
-
     }
 
-    @Override
     public void windowDeactivated(WindowEvent e) {
-
     }
 }
